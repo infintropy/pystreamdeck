@@ -2,6 +2,7 @@ from ElGateau import ElGateau, Icon
 import time
 import webbrowser
 import uuid
+import profile_manager
 
 eg = ElGateau(do_boot=False)
 BUTTON_COUNT = 15
@@ -149,7 +150,8 @@ def word_card(st=None):
         eg.display_clear(2)
 """
 
-
+cw = profile_manager.ControlWindow()
+cw.show()
 while True:
     try:
         chosen = eg.button_listen_key(list(range(1,16)))[0]
